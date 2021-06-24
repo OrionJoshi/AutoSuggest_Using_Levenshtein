@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Suggestion Using Levenshtein</title>
+    <!-- css links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./Css/style.css" />
+  </head>
+  <body>
+    <!-- main wrapper section -->
+    <div class="main-wrapper">
+      <!-- search  box section-->
+
+      <div class="search-box">
+        <div class="input-wrapper">
+          <button class="btn-search" id="btn-search">
+            <i class="fa fa-search"></i>
+          </button>
+          <input
+            type="text"
+            class="input-search"
+            id="input-search"
+            placeholder="Search Country ..."
+          />
+        </div>
+        <div class="list-wrapper">
+          <ul id="item"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- js file links -->
+    <script src="./Js/utilities.js"></script>
+    <script src="./Js/countryList.js"></script>
+    <script src="./Js/script.js"></script>
+  </body>
+</html>
