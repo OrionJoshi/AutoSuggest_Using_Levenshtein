@@ -29,3 +29,24 @@ function levenshtein(str1, str2) {
   // return a minimum cost and a string
   return obj;
 }
+
+// find nearest matching words
+
+function findMatchingWords(inputStr) {
+  const result = [];
+  for (let i = 0; i < NoOfCountries; i++) {
+    result.push(levenshtein(inputStr, countryList[i]));
+  }
+  // sort the countries by minimum distance
+  const sortedList = result.sort((a, b) => {
+    let key1 = Object.keys(a)[0];
+    let key2 = Object.keys(b)[0];
+    return a[key1] - b[key2];
+  });
+  return sortedList;
+}
+
+// capitilizing first leter
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
